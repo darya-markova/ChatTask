@@ -3,7 +3,8 @@ import {
     Segment,
     Button,
     Form,
-    Header
+    Header,
+    Message
 } from 'semantic-ui-react';
 
 import './SignIn.css';
@@ -11,6 +12,14 @@ import './SignIn.css';
 class SignIn extends Component {
     state = {
         currentUser: ''
+    };
+
+    isUsernameValid = () => {
+        return this.state.currentUser.length < 33;
+    };
+
+    isUsernameEmpty = () => {
+        return this.state.currentUser.length < 1;
     };
 
     onUsernameChange = ({target}) => {
@@ -24,16 +33,22 @@ class SignIn extends Component {
     };
 
     render() {
+        const errorLabel = !this.isUsernameValid() && <span className='errorLabel'>Incorrect username</span>;
+
         return (
             <Segment className='signInContainer'>
                 <Header as='h3'>Simple chat</Header>
+
+                {errorLabel}
+
                 <Form unstackable>
                     <Form.Input
                         placeholder='username'
-                        value={this.state.currentUser}
                         onChange={this.onUsernameChange}/>
                     <Button
+                        primary
                         type='submit'
+                        disabled={!this.isUsernameValid() || this.isUsernameEmpty()}
                         onClick={this.onSignIn}>
                         Join
                     </Button>

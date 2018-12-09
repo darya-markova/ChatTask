@@ -4,3 +4,9 @@
     padding: 30px 20px !important;
     text-align: center !important;
 }
+.errorLabel {
+    color: red;
+}
+.errorLabel:after {
+    content: ' *';
+}

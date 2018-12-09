@@ -8,7 +8,7 @@ It emulates simple chat supporting several event type:
 
 3)Notifying when user goes offline
 
-Launch the  app with `npm start` instruction
+Launch the  app with `npm run start` instruction
 
 All the connections are listening on `localhost:8000`
 
