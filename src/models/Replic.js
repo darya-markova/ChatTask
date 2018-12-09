@@ -1,6 +1,6 @@
 export default class Replic {
     constructor(text, author) {
-        this.text = text;
+        this.text = text.substr(0, 255); //макс длина - 255
         this.author = author;
         this.time = this.getCurrentDateAndTime();
     }
