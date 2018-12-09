@@ -1,6 +1,8 @@
+import { ChatEvent } from '../models/ChatEvent';
+
 export const leaveUserAction = (userName) => {
     return {
-        type: 'LEAVE_USER',
+        type: ChatEvent.LEAVE,
         userName: userName
     }
 };

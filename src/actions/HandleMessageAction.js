@@ -1,6 +1,8 @@
+import { ChatEvent } from '../models/ChatEvent';
+
 export const handleMessageAction = (msgText) => {
   return {
-    type: 'NEW_MESSAGE',
+    type: ChatEvent.MESSAGE,
     newMessage: msgText
   }
 };

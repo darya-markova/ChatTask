@@ -1,6 +1,8 @@
+import { ChatEvent } from '../models/ChatEvent';
+
 export const connectNotifyAction = (newUser) => {
   return {
-    type: 'CONNECT_SERVER',
+    type: ChatEvent.OPEN,
     newUser: newUser
   }
 };
