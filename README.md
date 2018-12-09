@@ -1,8 +1,14 @@
-App created with help create-react-app
+App created with help create-react-app.
 
-To emulate server run `node server.js`
+It emulates simple chat supporting several event type:
 
-Launch the rest app with `npm start` instruction
+1)Connection to server
+
+2)Sending message and broadcasting
+
+3)Notifying when user goes offline
+
+Launch the  app with `npm start` instruction
 
 All the connections are listening on `localhost:8000`
 
