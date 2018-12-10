@@ -10,5 +10,7 @@ It emulates simple chat supporting several event type:
 
 Launch the  app with `npm run start` instruction
 
+(checkout `windows-launch` branch if you need run the app on Windows platform)
+
 All the connections are listening on `localhost:8000`
 
